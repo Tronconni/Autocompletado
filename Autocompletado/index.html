@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Autocompletado de correo</title>
+  <meta name="description" content="A jQuery plugin that suggests and autocompletes the domain in email fields.">
+  <meta name="author" content="Yong Zhen">
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.css'>
+  <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+</head>
+<body>
+
+  <form role="form">
+     <div class="form-group">
+       <label for="email">Ingrese Email:</label>
+       <input type="email" class="form-control email" id="email" placeholder="Enter email">
+       <span class="help-block">Presione tab para autocompletar su Email.</span>
+     </div>
+     <div class="form-group">
+       <label for="email2">Ingrese un Email secundario:</label>
+       <input type="text" class="form-control email" id="email2" placeholder="Enter email">
+     </div>
+   </form>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script src="js/jquery.email-autocomplete.js"></script>
+  <script>
+      (function($){
+        $(function() {
+          $(".email").emailautocomplete({
+            domains: ["example.com"]
+          });
+        });
+      }(jQuery));
+  </script>
+</body>
+</html>
